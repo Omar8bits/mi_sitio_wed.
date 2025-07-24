@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi sitio web</title>
+    <style>
+
+        /* esta primera parte controlo el color de la pagina, los margenes y el tipo de letra */
+        body {
+            background-color: lightgray;
+            /* lo que esta escrito en margin es 0px=eje "y", y 50px=eje "x".*/ 
+            margin: 0px 50px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 48px;
+            color: black;
+        }
+
+        /* este bloque de codigo crea un espacion en la pantalla que divide en 3 partes .left .center .right es la clase madre con la que controlamos varios atributos de las demas */
+        .contenedor {
+            width: 100%;
+            display: flex; 
+            /*Convierte el contenedor en un contenedor flexbox, lo cual permite colocar sus elementos hijos uno al lado del otro (en fila) y controlar su alineación fácilmente. */
+            /*Es la base para distribuir el contenido interno (como .izquierda y .derecha) de forma horizontal, ordenada y flexible.*/
+            justify-content: space-between;
+            align-items: flex-start; /* Alinea los elementos hijos en la parte superior */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .left {
+            width: 33%;
+            text-align: left;
+            transform: translateY(-400px); /* sube 50px en el eje Y */
+        }
+
+        .center{
+            width: 33%;
+            text-align: center;
+        }
+
+        .ajustado-center-right{
+            
+            text-align: right;
+            font-size: 50px;
+            margin-top: 10px; 
+            margin-right: 50px; 
+        }
+        .ajustado-center-left{
+            
+            text-align: left;
+            font-size: 50px;
+            margin-top: -110px; 
+            margin-left: 50px; 
+        }
+        .right {
+            width: 33%;
+            text-align: right;
+            transform: translateY(-400px); /* sube 50px en el eje Y */
+        
+        }
+
+        /*este bloque de codigo permite ajustar textos que esten dentro de la seccion hija right*/
+        /*si se desa colocar otro texto y ajustarlo se debe crear otra clase .ajustado*/
+        .ajustado-right {
+            text-align: left;
+            margin-left: 5%;
+            margin-right: 0;
+            transform: translateY(-10px); /* sube 50px en el eje Y */
+        }
+
+        .h2, h3 {
+            text-align: center;
+            margin-top: 20px;
+            color: black;
+        }
+
+        .h4 {
+            text-align: center;
+            margin-top: -20px;
+            font-size: 30px;
+            color: black;
+            transform: translateX(400px);
+            transform: translateY(300px);
+        }
+        .footer {
+            text-align: center;
+            margin-top: -20px;
+            font-size: 20px;
+            color: black;
+            transform: translateY(300px);
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+
+        <h1>
+            BIENVENIDO
+        </h1>
+
+    
+
+    <img src="imagenes/perrito_en_traje.jpg" alt="HOLA" width="400" />
+
+
+    <div class="contenedor">
+
+        <!--Seccion hija left-->
+        <section class="left">
+            <h2 class="h2">
+                informacion Personal.
+            </h2>
+            <p>
+
+                En esta parte podras ingresar a otras paginas con mas informacion sobre mi 
+            </p>
+
+            <ol> 
+                <li><b>Biografia:</b> </li>
+                <p> Aquí puedes encontrar información detallada sobre mi vida y mis intereses. Reitero no comprender los motivos por los cuales quieres esa informacion pero tu siguele.<br><a href="about_me.html" target="">Haz clic aquí para ver mi biografía</a></p>  
+
+                <li><b>Proyectos:</b></li>
+                <p> Aquí podrás ver los proyectos en los que he trabajado y en los que estoy trabajando actualmente.<br> <a href="proyectos.html" target="">Haz clic aquí para ver mis proyectos</a></p>
+                
+                <li><b>Imágenes:</b></li>
+                <p> Aquí podrás ver....imagenes :D<br> <a href="imagenes.html" target="">Haz clic aquí para ver las imágenes</a> </p>
+                
+
+                <li><b>Formulario:</b></li>
+                <p> Aqui hay un formulario no se para que pero el profe lo pido asi que ni modo.<br><a href="formulario.html" target="">Haz clic aquí para llenar tu formulario</a></p>
+                
+
+            </ol>
+        </section>
+
+        <!--Seccion hija central-->
+        <section class="center">
+            <p>
+                <b>Bienvenido a mi página web</b><br>
+                Aquí podrás encontrar una biografía completa sobre mi persona.<br>
+                Puedes buscar cosas específicas que quieras saber sobre mí.<br>
+                No sé para qué querrías saber de mí, pero si eso te hace feliz, ¡bien por ti, crack! 😎
+
+          
+                <!--flecha derecha-->
+                <p class="ajustado-center-right">
+                    🠚
+                </p>
+                
+                <p class="ajustado-center-left">
+                    🠘
+                </p>
+            </p>
+        </section>
+
+        <!--Seccion hija right-->
+        
+        <section class="right">
+            <h3 class="h3">
+                Objetivo de mi sitio web
+            </h3>
+            
+            <p class="ajustado-right">
+                En esta sección podrás dirigirte a otra página donde se menciona brevemente el propósito por el cual se crea este sitio web tipo blog.
+            </p>
+
+
+            
+            <div class="contenedor">
+                <section class="ajustado">
+                    <p>
+                        <br><a href="proposito.html" target="">Haz clic aquí para ver el propósito</a>
+                    </p>
+                </section>
+            </div>
+
+            <div class="h4">
+                <p>Contacto</p>
+            </div>
+            <footer class="footer">
+                <p >Email: omar.pallarez@cun.edu.com</p>
+                <p>Nequi: 3004507780</p>
+                <p>Sígueme en <a href="https://twitter.com/tuusuario" target="_blank">Twitter</a></p>
+            </footer>
+            
+            
+        </section>
+    </div>
+
+</body>
+</html>

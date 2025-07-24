@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi sitio web</title>
+    <style>
+
+        /* esta primera parte controlo el color de la pagina, los margenes y el tipo de letra */
+        body {
+            background-color: lightgray;
+            /* lo que esta escrito en margin es 0px=eje "y", y 50px=eje "x".*/ 
+            margin: 0px 50px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 48px;
+            color: black;
+        }
+        
+        .center {
+            width: 40%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* ...existing code... */
+        @keyframes mover-derecha-izquierda {
+            0% { transform: translateX(1600px); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateX(-1000px); opacity: 0; }
+        }   
+
+        .texto-movible {
+            display: inline-block;
+            animation: mover-derecha-izquierda 10s linear infinite;
+            font-size: 100px;
+            color: black;
+        }
+        .mover {
+            display: inline-block;
+            animation: mover-derecha-izquierda 10s linear infinite;
+        }
+
+
+        .imagen {
+            display: block;
+            margin: 0 auto; /* Centra la imagen horizontalmente */
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="h1">
+        <h1>
+            Logros personales :
+        </h1>
+
+    <img class="imagen" src="imagenes/emoji_con_lente.png" alt="HOLA" width="400" />
+
+    </section>
+    
+
+
+    <section class="mover">
+        <p class="texto-movible">
+            SOBREVIVIR.
+        </p>
+    </section>
+
+
+    <section >
+   
+        <a href="about_me.html">Volver al atras.</a>
+         
+    </section>
+
+
+    </section>
+
+</body>
+</html>

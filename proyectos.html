@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi sitio web</title>
+    <style>
+        /* esta primera parte controlo el color de la pagina, los margenes y el tipo de letra */
+        body {
+            background-color: lightgray;
+            /* lo que esta escrito en margin es 0px=eje "y", y 50px=eje "x".*/
+            margin: 0px 50px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 48px;
+            color: black;
+        }
+
+        /* este bloque de codigo crea un espacion en la pantalla que divide en 3 partes .left .center .right es la clase madre con la que controlamos varios atributos de las demas */
+        .contenedor {
+            width: 100%;
+            display: flex;
+            /*Convierte el contenedor en un contenedor flexbox, lo cual permite colocar sus elementos hijos uno al lado del otro (en fila) y controlar su alineación fácilmente. */
+            /*Es la base para distribuir el contenido interno (como .izquierda y .derecha) de forma horizontal, ordenada y flexible.*/
+            justify-content: space-between;
+            align-items: flex-start;
+            /* Alinea los elementos hijos en la parte superior */
+            padding: 20px;
+            box-sizing: border-box;
+            min-height: 80vh;
+        }
+
+        .left {
+            width: 33%;
+            text-align: left;
+            transform: translateY(300px);
+            /* sube 50px en el eje Y */
+        }
+
+        .center {
+            width: 40%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .right {
+            width: 33%;
+            text-align: right;
+            transform: translateY(200px);
+            /* sube 50px en el eje Y */
+
+        }
+
+        
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Mis proyectos personales</h1>
+
+    <section class="contenedor">
+
+        <!--Seccion hija left-->
+        <section class="left">
+            <img src="imagenes/sorprendido2.jpg" alt="HOLA" width="400" /><br />
+           
+            
+        </section>
+
+        <!--Seccion hija central-->
+        <section class="center">
+            <h2>Inventario D&Y</h2>
+            <img src="imagenes/inventarioimg.png" alt="inventario" width="400" /><br>
+
+            <a href="inventario/InventarioUnificado.exe" download>Descargar mi programa</a>
+            <br>
+
+            <time datetime="2025-04-15">Fecha de creación: 15 de abril del 2025</time>
+            <p>
+                Una interfaz de inventario para un negocio de venta de productos de belleza.
+                Hecho en python y tkinter una de sus librerias para la programación  de la interfaz gráfica y su visualización.
+            </p>
+            <p>
+                Fue creado con el propósito de que mi mamá me dejara de pedir un lapicero cada vez que necesitara sacar cuentas.
+            </p>
+            
+            
+            <a href="web.html" target="">Volver a la página principal</a>
+            
+        </section>
+
+        <!--Seccion hija right-->
+        <section class="right">
+            <img src="imagenes/sorprendido.jpg" alt="HOLA" width="400" /><br>
+            
+        </section>
+    </section>
+
+</body>
+
+</html>

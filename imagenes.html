@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi sitio web</title>
+    <style>
+
+        /* esta primera parte controlo el color de la pagina, los margenes y el tipo de letra */
+        body {
+            background-color: lightgray;
+            /* lo que esta escrito en margin es 0px=eje "y", y 50px=eje "x".*/ 
+            margin: 0px 50px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 48px;
+            color: black;
+        }
+        
+        .center {
+            width: 100%;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .mensaje-movible {
+            position: fixed;
+            left: 0;
+            bottom: 30px;
+            width: 100%;
+            font-size: 100px;
+            color: black;
+            text-align: center;
+            animation: mover-derecha-izquierda 8s linear infinite;
+            z-index: 100;
+        }
+
+        @keyframes mover-derecha-izquierda {
+            0% { transform: translateX(100vw); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateX(-100vw); opacity: 0; }
+        }
+
+        .volver-inicio {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            font-size: 20px;
+            
+            text-decoration: none;
+            z-index: 101;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <section class="h1">
+        <h1>
+            Imagenes :
+        </h1>
+    </section>
+    
+
+
+    <section class="center" style="height: 60vh;">
+        <video src="imagenes/pato.mp4" width="400" controls autoplay muted loop>
+            Tu navegador no soporta el video.
+        </video>
+    </section>
+
+    <div class="mensaje-movible" style="animation-delay: 0s; opacity: 0;">
+        <p>Gracias por visitarnos</p>
+    </div>
+
+    <div class="mensaje-movible" style="animation-delay: 4s; opacity: 0;">
+        <p>No vuelvan :D</p>
+    </div>
+
+    <a href="web.html" class="volver-inicio">Volver al atras.</a>
+
+    </section>
+    <section >
+   
+        
+    </section>
+
+</body>
+</html>

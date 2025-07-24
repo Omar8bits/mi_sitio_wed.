@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi sitio web</title>
+    <style>
+        /* esta primera parte controlo el color de la pagina, los margenes y el tipo de letra */
+        body {
+            background-color: lightgray;
+            /* lo que esta escrito en margin es 0px=eje "y", y 50px=eje "x".*/
+            margin: 0px 50px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 48px;
+            color: black;
+        }
+
+        /* este bloque de codigo crea un espacion en la pantalla que divide en 3 partes .left .center .right es la clase madre con la que controlamos varios atributos de las demas */
+        .contenedor {
+            width: 100%;
+            display: flex;
+            /*Convierte el contenedor en un contenedor flexbox, lo cual permite colocar sus elementos hijos uno al lado del otro (en fila) y controlar su alineación fácilmente. */
+            /*Es la base para distribuir el contenido interno (como .izquierda y .derecha) de forma horizontal, ordenada y flexible.*/
+            justify-content: space-between;
+            align-items: flex-start;
+            /* Alinea los elementos hijos en la parte superior */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .left {
+            width: 33%;
+            text-align: left;
+            transform: translateY(-400px);
+            /* sube 50px en el eje Y */
+        }
+
+        .center {
+            width: 33%;
+            text-align: center;
+        }
+
+        .ajustado-center-right {
+
+            text-align: right;
+            font-size: 50px;
+            margin-top: 10px;
+            margin-right: 50px;
+        }
+
+        .ajustado-center-left {
+
+            text-align: left;
+            font-size: 50px;
+            margin-top: -110px;
+            margin-left: 50px;
+        }
+
+        .right {
+            width: 33%;
+            text-align: right;
+            transform: translateY(-400px);
+            /* sube 50px en el eje Y */
+
+        }
+
+        /*este bloque de codigo permite ajustar textos que esten dentro de la seccion hija right*/
+        /*si se desa colocar otro texto y ajustarlo se debe crear otra clase .ajustado*/
+        .ajustado-right {
+            text-align: left;
+            margin-left: 5%;
+            margin-right: 0;
+            transform: translateY(-10px);
+            /* sube 50px en el eje Y */
+        }
+
+        .h2,
+        h3 {
+            text-align: center;
+            margin-top: 20px;
+            color: black;
+        }
+
+        .h4 {
+            text-align: center;
+            margin-top: -20px;
+            font-size: 30px;
+            color: black;
+            transform: translateX(400px);
+            transform: translateY(300px);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: -20px;
+            font-size: 20px;
+            color: black;
+            transform: translateY(300px);
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>
+        Mi Experiencia y Habilidades
+    </h1>
+
+
+
+    <img src="imagenes/perrito_en_traje.jpg" alt="HOLA" width="400" />
+
+
+    <div class="contenedor">
+
+        <!--Seccion hija left-->
+        <section class="left">
+            <h2 class="h2">
+                Presentación.
+            </h2>
+            <p>
+                Tengo cero Experiencia laboral, pero he desarrollado proyectos personales que me han permitido adquirir
+                habilidades técnicas valiosas. Estoy en constante aprendizaje y busco oportunidades para aplicar mis
+                conocimientos en un entorno profesional.
+                <br>
+                Si luego de ver esta hermosa obra de arte que es mi pagina web no te convences de contratar me brother,
+                ya el del problema eres tu no yo
+
+            </p>
+
+
+            <h2 class="h2">Educacion</h2>
+            <dl>
+                <dt id="primaria">2012 - 2017: Primaria</dt>
+                <dd>
+                    Estudié en la primaria en un Colegio.<br>
+                    <a href="#secundaria">Ir a Secundaria</a>
+                </dd>
+                <dt id="secundaria">2018 - 2023: Secundaria</dt>
+                <dd>
+                    Luego pasé a bachiller en el mismo colegio donde estudié la primaria.<br>
+                    <a href="#universidad">Ir a Universidad</a>
+                </dd>
+                <dt id="universidad">2025 - 2030: Universidad</dt>
+                <dd>
+                    Ahora estoy en la universidad :D<br>
+                    
+                </dd>
+
+                <div style="margin-top: 40px;">
+                    <a href="web.html   ">Volver al inicio</a>
+                </div>
+            </dl>
+
+
+
+        </section>
+
+        <!--Seccion hija central-->
+
+        <section class="center">
+            <h2 class="h2">Habilidades Técnicas</h2>
+            <ul>
+                <li>Python (Tkinter, manejo de bases de datos)</li>
+                <li>HTML5 y CSS3</li>
+                <li>MySQL</li>
+                <li>Git y GitHub</li>
+                <li>Resolución de problemas</li>
+            </ul>
+
+            <h2 class="h2">Logros Principales</h2>
+            <ol>
+                <li>Desarrollo de un sistema de inventario para negocio familiar</li>
+                <li>Automatización de tareas administrativas</li>
+                <li>Participación en proyectos colaborativos escolares</li>
+                <li>Aprendizaje autodidacta de programación</li>
+            </ol>
+
+            <h2 class="h2">Comparativa de Competencias</h2>
+            <table border="1" style="margin: 0 auto; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th>Competencia</th>
+                        <th>Nivel</th>
+                        <th>Experiencia (años)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Python</td>
+                        <td>Avanzado</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>HTML/CSS</td>
+                        <td>Intermedio</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>MySQL</td>
+                        <td>Básico</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Trabajo en equipo</td>
+                        <td>Intermedio</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!--Seccion hija right-->
+
+        <section class="right">
+    <h2 class="h2">Presentación Profesional</h2>
+    <p>
+        Soy estudiante y desarrollador autodidacta con pasión por la tecnología y la resolución de problemas.
+        Me especializo en el desarrollo de aplicaciones sencillas y funcionales, con interés en seguir creciendo
+        profesionalmente.
+    </p>
+
+    <ul style="text-align: left;">
+        <li>
+            <a href="logros.html">Para ver mis logros personales</a>
+        </li>
+    </ul>
+</section>
+
+</html>

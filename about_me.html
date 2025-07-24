@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi sitio web</title>
+    <style>
+        /* esta primera parte controlo el color de la pagina, los margenes y el tipo de letra */
+        body {
+            background-color: lightgray;
+            /* lo que esta escrito en margin es 0px=eje "y", y 50px=eje "x".*/
+            margin: 0px 50px;
+            font-family: Arial, sans-serif;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 48px;
+            color: black;
+        }
+
+        /* este bloque de codigo crea un espacion en la pantalla que divide en 3 partes .left .center .right es la clase madre con la que controlamos varios atributos de las demas */
+        .contenedor {
+            width: 100%;
+            display: flex;
+            /*Convierte el contenedor en un contenedor flexbox, lo cual permite colocar sus elementos hijos uno al lado del otro (en fila) y controlar su alineación fácilmente. */
+            /*Es la base para distribuir el contenido interno (como .izquierda y .derecha) de forma horizontal, ordenada y flexible.*/
+            justify-content: space-between;
+            align-items: flex-start;
+            /* Alinea los elementos hijos en la parte superior */
+            padding: 20px;
+            box-sizing: border-box;
+            min-height: 80vh;
+        }
+
+        .left {
+            width: 33%;
+            text-align: left;
+            transform: translateY(200px);
+            /* sube 50px en el eje Y */
+        }
+
+        .center {
+            width: 40%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .right {
+            width: 33%;
+            text-align: right;
+            transform: translateY(200px);
+            /* sube 50px en el eje Y */
+
+        }
+
+        .volver-inicio {
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>
+        Mi BIOGRAFIA
+    </h3>
+
+    <div class="contenedor">
+
+        <!--Seccion hija left-->
+        <section class="left">
+            <p>
+                <b>la mitad del salon:</b>
+            </p>
+
+            <video src="imagenes/ignora.mp4" width="400" controls autoplay muted loop>
+                <p>Tu navegador no soporta el video.</p>
+            </video>
+        </section>
+
+        <!--Seccion hija central-->
+        <section class="center">
+            <p>
+                Me llamo omar pallarez, tengo 18 años y soy estudiante de ingenieria de sistemas en la universidad cun. y no se que mas decir porque no soy bueno redactando mi biografia asi que solo escribire lo que se me ocurra para rellenar espacion y aprovechare para practicar mecanografia mientras tanto, asi que preparence para ver los horrores ortograficos mas epicos de la historia, entonces soy de venezuela vivi alla hasta los 10 años hasta que cierto presidente decidio que venezuela ya no podia seguir una potencial potencia mundial y volvio eso un mierdero tambien conocido como super bigote refernecia para quien sea de alla. me fui para colombia cuando tenia como 12 años creo mas exactamente a maicao la guajira y desde entonces eh hecho mi vida aqui ehh...... que mas? actualmente estudio Ingenieria de sistemas por que...si la pregunta seria ¿por que no? apenas voy por el primer semestre y me fijo una meta de luego de terminar mi carrera poder trabajar de lo que estudie y tner un perro o algo y un gato, y ya no se que mas poner asi ue voy a ver como quedo este testamento en la pagina ahora solo aparecen 3 lineas de texto xd.
+                <br>
+                beno muchachos se ve muy poquito asi que toco rellenar con lo que sea de aqui en adelante nada de lo escrito tendra ningun tipo de coherencia es solo para rllenar que y que no se vea tan vacia esta parte asi que profe no le preste atencion a esta parte gracias.
+                se me olvido que no use las etiqueyteas que correspondian a esta parte pero ya que ya esta tarde  y mañana trabajo asi que asi se fue ahora tengo que averiguar como le hago para poner esto en GitHub por que nunca lo eh hecho aunque tal vez lo pueda hacer en la universidad creo... joda tambien se me olvido que no hice el laboratorio 3  de circuitos nojodaaaa bueno ahora dormire intranquilo por que ya eta tarde pa ponerme a hacer eso weno quien sea que se haya tomado el tiempo de leer esto hasta el final... que no tienes mejores cosas que hacer o que? ponte a aprender ingles es que deberias porque te van a comer los gringos como sigas asi. bueno ya chiao.
+            </p>
+            <hr>
+            <ul class="center-text">
+                <li>
+                    Para ver mis habilidades tecnicas y todo lo relacionado con lo profesional.<br>
+                    <a href="habilidades.html">carta profesional.</a>
+                </li>
+                
+            </ul>
+        </section>
+
+        <!--Seccion hija right-->
+        <section class="right">
+            <p>
+                <b>la otra mitad del salon:</b>
+            </p>
+            <video src="imagenes/vale.mp4" width="400" controls autoplay muted loop>
+                <p>Tu navegador no soporta el video.</p>
+            </video>
+        </section>
+
+    </div>
+
+    <section class="volver-inicio">
+        <a href="web.html">Volver al atras.</a>
+    </section>
+
+</body>
+
+</html>
